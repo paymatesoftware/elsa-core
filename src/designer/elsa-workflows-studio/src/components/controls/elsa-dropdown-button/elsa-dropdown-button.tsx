@@ -55,13 +55,13 @@ export class ElsaContextMenu {
 
     render() {
         return (
-            <div class="elsa-relative" ref={el => this.element = el}>
+            <div class="elsa elsa-relative" ref={el => this.element = el}>
                 <button onClick={e => this.toggleMenu()} type="button"
                         class={this.btnClass}
                         aria-haspopup="true" aria-expanded="false">
                     {this.renderIcon()}
                     {this.text}
-                    <svg class="elsa-ml-2.5 -elsa-elsa-mr-1.5 elsa-h-5 elsa-w-5 elsa-text-gray-400" x-description="Heroicon name: chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg class="elsa elsa-ml-2.5 -elsa-elsa-mr-1.5 elsa-h-5 elsa-w-5 elsa-text-gray-400" x-description="Heroicon name: chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                     </svg>
                 </button>
@@ -81,9 +81,9 @@ export class ElsaContextMenu {
                     data-transition-enter-start="elsa-transform elsa-opacity-0 elsa-scale-95"
                     data-transition-leave="elsa-transition elsa-ease-in elsa-duration-75"
                     data-transition-leave-start="elsa-transform elsa-opacity-100 elsa-scale-100"
-                    data-transition-leave-end="elsa-transform elsa-opacity-0 elsa-scale-95"            
-                    class={`hidden ${originClass} elsa-z-10 elsa-absolute elsa-mt-2 elsa-w-56 elsa-rounded-md elsa-shadow-lg elsa-bg-white elsa-ring-1 elsa-ring-black elsa-ring-opacity-5`}>
-            <div class="elsa-py-1" role="menu" aria-orientation="vertical">
+                    data-transition-leave-end="elsa-transform elsa-opacity-0 elsa-scale-95"
+                    class={`elsa hidden ${originClass} elsa-z-10 elsa-absolute elsa-mt-2 elsa-w-56 elsa-rounded-md elsa-shadow-lg elsa-bg-white elsa-ring-1 elsa-ring-black elsa-ring-opacity-5`}>
+            <div class="elsa elsa-py-1" role="menu" aria-orientation="vertical">
                 {this.renderItems()}
             </div>
         </div>;
@@ -95,7 +95,7 @@ export class ElsaContextMenu {
 
             return !!item.url
                 ? <stencil-route-link onClick={e => this.closeContextMenu()} url={item.url} anchorClass={`elsa-block elsa-px-4 elsa-py-2 elsa-text-sm ${selectedCssClass} elsa-cursor-pointer`} role="menuitem">{item.text}</stencil-route-link>
-                : <a href="#" onClick={e => this.onItemClick(e, item)} class={`elsa-block elsa-px-4 elsa-py-2 elsa-text-sm ${selectedCssClass}`} role="menuitem">{item.text}</a>;
+                : <a href="#" onClick={e => this.onItemClick(e, item)} class={`elsa elsa-block elsa-px-4 elsa-py-2 elsa-text-sm ${selectedCssClass}`} role="menuitem">{item.text}</a>;
         })
     }
 

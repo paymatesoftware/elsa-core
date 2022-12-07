@@ -74,17 +74,17 @@ export class ElsaInputTags {
         const valuesJson = JSON.stringify(values);
 
         return (
-            <div class="elsa-py-2 elsa-px-3 elsa-bg-white elsa-shadow-sm elsa-border elsa-border-gray-300 elsa-rounded-md">
+            <div class="elsa elsa-py-2 elsa-px-3 elsa-bg-white elsa-shadow-sm elsa-border elsa-border-gray-300 elsa-rounded-md">
                 {values.map(value => (
-                    <a href="#" onClick={e => this.onDeleteTagClick(e, value)} class="elsa-inline-block elsa-text-xs elsa-bg-blue-400 elsa-text-white elsa-py-2 elsa-px-3 elsa-mr-1 elsa-mb-1 elsa-rounded">
+                    <a href="#" onClick={e => this.onDeleteTagClick(e, value)} class="elsa elsa-inline-block elsa-text-xs elsa-bg-blue-400 elsa-text-white elsa-py-2 elsa-px-3 elsa-mr-1 elsa-mb-1 elsa-rounded">
                         <span>{value}</span>
-                        <span class="elsa-text-white hover:elsa-text-white elsa-ml-1">&times;</span>
+                        <span class="elsa elsa-text-white hover:elsa-text-white elsa-ml-1">&times;</span>
                     </a>
                 ))}
-                <input type="text" id={this.fieldId} 
+                <input type="text" id={this.fieldId}
                        onKeyDown={e => this.onInputKeyDown(e)}
                        onBlur={e => this.onInputBlur(e)}
-                       class="elsa-tag-input elsa-inline-block elsa-text-sm elsa-outline-none focus:elsa-outline-none elsa-border-none shadow:none focus:elsa-border-none focus:elsa-border-transparent focus:shadow-none"
+                       class="elsa elsa-tag-input elsa-inline-block elsa-text-sm elsa-outline-none focus:elsa-outline-none elsa-border-none shadow:none focus:elsa-border-none focus:elsa-border-transparent focus:shadow-none"
                        placeholder={this.placeHolder}/>
                 <input type="hidden" name={this.fieldName} value={valuesJson}/>
             </div>

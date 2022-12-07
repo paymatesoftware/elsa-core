@@ -288,7 +288,7 @@ export class ElsaWorkflowRegistryListScreen {
                   <td
                     class="elsa-px-6 elsa-py-3 elsa-whitespace-no-wrap elsa-text-sm elsa-leading-5 elsa-font-medium elsa-text-gray-900">
                     <div class="elsa-flex elsa-items-center elsa-space-x-3 lg:elsa-pl-2">
-                      <stencil-route-link url={editUrl} anchorClass="elsa-truncate hover:elsa-text-gray-600">
+                      <stencil-route-link url={editUrl} anchorClass="elsa elsa-truncate hover:elsa-text-gray-600">
                         <span>{workflowDisplayName}</span></stencil-route-link>
                     </div>
                   </td>
@@ -296,7 +296,7 @@ export class ElsaWorkflowRegistryListScreen {
                   <td class="elsa-px-6 elsa-py-3 elsa-text-sm elsa-leading-5 elsa-text-gray-500 elsa-font-medium">
                     <div class="elsa-flex elsa-items-center elsa-space-x-3 lg:elsa-pl-2">
                       <stencil-route-link url={instancesUrl}
-                                          anchorClass="elsa-truncate hover:elsa-text-gray-600">Instances
+                                          anchorClass="elsa elsa-truncate hover:elsa-text-gray-600">Instances
                       </stencil-route-link>
                     </div>
                   </td>

@@ -105,15 +105,15 @@ export class ElsaActivityPickerModal {
     const categories = this.categories;
 
     return (
-      <Host class="elsa-block">
+      <Host class="elsa elsa-block">
         <elsa-modal-dialog ref={el => this.dialog = el}>
-          <div slot="content" class="elsa-py-8">
+          <div slot="content" class="elsa elsa-py-8">
             <div class="elsa-flex">
               <div class="elsa-px-8">
                 <nav class="elsa-space-y-1" aria-label="Sidebar">
                   {categories.map(category => (
                     <a href="#" onClick={e => this.onCategoryClick(e, category)}
-                       class={`${category == this.selectedCategory ? selectedCategoryClass : defaultCategoryClass} elsa-text-gray-600 hover:elsa-bg-gray-50 hover:elsa-text-gray-900 elsa-flex elsa-items-center elsa-px-3 elsa-py-2 elsa-text-sm elsa-font-medium elsa-rounded-md`}>
+                       class={`elsa ${category == this.selectedCategory ? selectedCategoryClass : defaultCategoryClass} elsa-text-gray-600 hover:elsa-bg-gray-50 hover:elsa-text-gray-900 elsa-flex elsa-items-center elsa-px-3 elsa-py-2 elsa-text-sm elsa-font-medium elsa-rounded-md`}>
                     <span class="elsa-truncate">
                       {category}
                     </span>
@@ -134,7 +134,7 @@ export class ElsaActivityPickerModal {
                       </svg>
                     </div>
                     <input type="text" value={this.searchText} onInput={e => this.onSearchTextChange(e)}
-                           class="form-input elsa-block elsa-w-full elsa-pl-10 sm:elsa-text-sm sm:elsa-leading-5 focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-rounded-md elsa-border-gray-300"
+                           class="elsa form-input elsa-block elsa-w-full elsa-pl-10 sm:elsa-text-sm sm:elsa-leading-5 focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-rounded-md elsa-border-gray-300"
                            placeholder="Search activities"/>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export class ElsaActivityPickerModal {
             <div class="elsa-bg-gray-50 elsa-px-4 elsa-py-3 sm:elsa-px-6 sm:elsa-flex sm:elsa-flex-row-reverse">
               <button type="button"
                       onClick={() => this.onCancelClick()}
-                      class="elsa-mt-3 elsa-w-full elsa-inline-flex elsa-justify-center elsa-rounded-md elsa-border elsa-border-gray-300 elsa-shadow-sm elsa-px-4 elsa-py-2 elsa-bg-white elsa-text-base elsa-font-medium elsa-text-gray-700 hover:elsa-bg-gray-50 focus:elsa-outline-none focus:elsa-ring-2 focus:elsa-ring-offset-2 focus:elsa-ring-blue-500 sm:elsa-mt-0 sm:elsa-ml-3 sm:elsa-w-auto sm:elsa-text-sm">
+                      class="elsa elsa-mt-3 elsa-w-full elsa-inline-flex elsa-justify-center elsa-rounded-md elsa-border elsa-border-gray-300 elsa-shadow-sm elsa-px-4 elsa-py-2 elsa-bg-white elsa-text-base elsa-font-medium elsa-text-gray-700 hover:elsa-bg-gray-50 focus:elsa-outline-none focus:elsa-ring-2 focus:elsa-ring-offset-2 focus:elsa-ring-blue-500 sm:elsa-mt-0 sm:elsa-ml-3 sm:elsa-w-auto sm:elsa-text-sm">
                 Cancel
               </button>
             </div>

@@ -31,14 +31,14 @@ export class ElsaDesignerPanel {
 
     return (
       <Host>
-        <div class="elsa-mt-4">
+        <div class="elsa elsa-mt-4">
           {features.map(name => {
             const feature = featuresDataManager.getFeatureConfig(name);
 
             return (
               <div>
-                <div class="elsa-relative elsa-flex elsa-items-start elsa-ml-1">
-                  <div class="elsa-flex elsa-items-center elsa-h-5">
+                <div class="elsa elsa-relative elsa-flex elsa-items-start elsa-ml-1">
+                  <div class="elsa elsa-flex elsa-items-center elsa-h-5">
                     <input
                       id={name}
                       name={name}
@@ -46,15 +46,15 @@ export class ElsaDesignerPanel {
                       value={`${feature.enabled}`}
                       checked={feature.enabled}
                       onChange={e => this.onToggleChange(e, name)}
-                      class="focus:elsa-ring-blue-500 elsa-h-4 elsa-w-4 elsa-text-blue-600 elsa-border-gray-300 rounded"
+                      class="elsa focus:elsa-ring-blue-500 elsa-h-4 elsa-w-4 elsa-text-blue-600 elsa-border-gray-300 rounded"
                     />
                   </div>
-                  <div class="elsa-ml-3 elsa-text-sm">
-                    <label htmlFor={name} class="elsa-font-medium elsa-text-gray-700">{t(`${name}Name`)}</label>
-                    <p class="elsa-text-gray-500">{t(`${name}Description`)}</p>
+                  <div class="elsa elsa-ml-3 elsa-text-sm">
+                    <label htmlFor={name} class="elsa elsa-font-medium elsa-text-gray-700">{t(`${name}Name`)}</label>
+                    <p class="elsa elsa-text-gray-500">{t(`${name}Description`)}</p>
                   </div>
                 </div>
-                <div class="elsa-ml-1 elsa-my-4">
+                <div class="elsa elsa-ml-1 elsa-my-4">
                   {this.renderFeatureData(name, feature)}
                 </div>
               </div>
@@ -74,7 +74,7 @@ export class ElsaDesignerPanel {
     switch (name) {
       case featuresDataManager.supportedFeatures.workflowLayout:
         return (
-          <select id={name} name={name} onChange={e => this.onPropertyChange(e, name)} class="block focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-w-full elsa-shadow-sm sm:elsa-text-sm elsa-border-gray-300 elsa-rounded-md">
+          <select id={name} name={name} onChange={e => this.onPropertyChange(e, name)} class="elsa block focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-w-full elsa-shadow-sm sm:elsa-text-sm elsa-border-gray-300 elsa-rounded-md">
             {Object.keys(LayoutDirection).map(key => {
               return <option value={LayoutDirection[key]} selected={LayoutDirection[key] === feature.value}>{t(key)}</option>;
             })}

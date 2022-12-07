@@ -118,7 +118,7 @@ export class ElsaScriptProperty {
 
       return (
         <div class="elsa-mt-3">
-          <p class={`elsa-mt-1 elsa-text-sm elsa-text-${color}-500`}>
+          <p class={`elsa elsa-mt-1 elsa-text-sm elsa-text-${color}-500`}>
             {this.activityValidatingContext.data}
           </p>
         </div>

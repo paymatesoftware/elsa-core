@@ -59,7 +59,7 @@ export class ElsaWorkflowBlueprintPropertiesPanel {
           <div class="elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
             <dt class="elsa-text-gray-500">{t('Status')}</dt>
             <dd
-              class={`${isPublished ? 'elsa-text-green-600' : 'elsa-text-yellow-700'}`}>{isPublished ? t('Published') : t('Draft')}</dd>
+              class={`elsa ${isPublished ? 'elsa-text-green-600' : 'elsa-text-yellow-700'}`}>{isPublished ? t('Published') : t('Draft')}</dd>
           </div>
         </dl>
       </Host>

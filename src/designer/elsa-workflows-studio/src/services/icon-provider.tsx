@@ -23,7 +23,7 @@ export class IconProvider {
   private map: Map<(options?: IconProviderOptions) => any> = {
     'plus': (options?: IconProviderOptions) =>
       <svg
-        class={`-elsa-ml-1 elsa-mr-2 elsa-h-5 elsa-w-5 ${options?.color ? `elsa-text-${options.color}-500` : ''} ${options?.hoverColor ? `hover:elsa-text-${options.hoverColor}-500` : ''}`}
+        class={`elsa -elsa-ml-1 elsa-mr-2 elsa-h-5 elsa-w-5 ${options?.color ? `elsa-text-${options.color}-500` : ''} ${options?.hoverColor ? `hover:elsa-text-${options.hoverColor}-500` : ''}`}
         width="24" height="24" viewBox="0 0 24 24"
         stroke-width="2" stroke="currentColor" fill="transparent" stroke-linecap="round"
         stroke-linejoin="round">
@@ -33,7 +33,7 @@ export class IconProvider {
       </svg>,
     'trash-bin-outline': (options?: IconProviderOptions) =>
       <svg
-        class={`elsa-h-5 elsa-w-5 ${options?.color ? `elsa-text-${options.color}-500` : ''} ${options?.hoverColor ? `hover:elsa-text-${options.hoverColor}-500` : ''}`}
+        class={`elsa elsa-h-5 elsa-w-5 ${options?.color ? `elsa-text-${options.color}-500` : ''} ${options?.hoverColor ? `hover:elsa-text-${options.hoverColor}-500` : ''}`}
         width="24" height="24" viewBox="0 0 24 24"
         stroke-width="2" stroke="currentColor" fill="transparent" stroke-linecap="round"
         stroke-linejoin="round">

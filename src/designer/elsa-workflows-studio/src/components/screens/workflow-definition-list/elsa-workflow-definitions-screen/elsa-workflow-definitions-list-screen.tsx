@@ -151,7 +151,7 @@ export class ElsaWorkflowDefinitionsListScreen {
                     </svg>
                   </div>
                   <input name="searchTerm"
-                         class="elsa-block elsa-w-full elsa-h-full elsa-pl-8 elsa-pr-3 elsa-py-2 elsa-rounded-md elsa-text-gray-900 elsa-placeholder-gray-500 focus:elsa-placeholder-gray-400 sm:elsa-text-sm elsa-border-0 focus:elsa-outline-none focus:elsa-ring-0"
+                         class="elsa elsa-block elsa-w-full elsa-h-full elsa-pl-8 elsa-pr-3 elsa-py-2 elsa-rounded-md elsa-text-gray-900 elsa-placeholder-gray-500 focus:elsa-placeholder-gray-400 sm:elsa-text-sm elsa-border-0 focus:elsa-outline-none focus:elsa-ring-0"
                          placeholder={t('Search')}
                          type="search"/>
                 </div>
@@ -231,13 +231,13 @@ export class ElsaWorkflowDefinitionsListScreen {
                 <tr>
                   <td class="elsa-px-6 elsa-py-3 elsa-whitespace-no-wrap elsa-text-sm elsa-leading-5 elsa-font-medium elsa-text-gray-900">
                     <div class="elsa-flex elsa-items-center elsa-space-x-3 lg:elsa-pl-2">
-                      <stencil-route-link url={editUrl} anchorClass="elsa-truncate hover:elsa-text-gray-600"><span>{workflowDisplayName}</span></stencil-route-link>
+                      <stencil-route-link url={editUrl} anchorClass="elsa elsa-truncate hover:elsa-text-gray-600"><span>{workflowDisplayName}</span></stencil-route-link>
                     </div>
                   </td>
 
                   <td class="elsa-px-6 elsa-py-3 elsa-text-sm elsa-leading-5 elsa-text-gray-500 elsa-font-medium">
                     <div class="elsa-flex elsa-items-center elsa-space-x-3 lg:elsa-pl-2">
-                      <stencil-route-link url={instancesUrl} anchorClass="elsa-truncate hover:elsa-text-gray-600"><IntlMessage label="Instances"/></stencil-route-link>
+                      <stencil-route-link url={instancesUrl} anchorClass="elsa elsa-truncate hover:elsa-text-gray-600"><IntlMessage label="Instances"/></stencil-route-link>
                     </div>
                   </td>
 

@@ -124,7 +124,7 @@ export class ElsaMultiExpressionEditor {
     const advancedButtonClass = selectedSyntax ? 'elsa-text-blue-500' : 'elsa-text-gray-300'
 
     return <div class="elsa-relative" ref={el => this.contextMenuWidget  = el}>
-      <button type="button" class={`elsa-border-0 focus:elsa-outline-none elsa-text-sm ${advancedButtonClass}`} onClick={e => this.onSettingsClick(e)}>
+      <button type="button" class={`elsa elsa-border-0 focus:elsa-outline-none elsa-text-sm ${advancedButtonClass}`} onClick={e => this.onSettingsClick(e)}>
         {!this.isReadOnly ? this.renderContextMenuButton() : ""}
       </button>
       <div>
@@ -139,12 +139,12 @@ export class ElsaMultiExpressionEditor {
              aria-orientation="vertical"
              aria-labelledby="options-menu">
           <div class="elsa-py-1" role="none">
-            <a onClick={e => this.selectSyntax(e, null)} href="#" class={`elsa-block elsa-px-4 elsa-py-2 elsa-text-sm hover:elsa-bg-gray-100 hover:elsa-text-gray-900 ${!selectedSyntax ? 'elsa-text-blue-700' : 'elsa-text-gray-700'}`} role="menuitem">Default</a>
+            <a onClick={e => this.selectSyntax(e, null)} href="#" class={`elsa elsa-block elsa-px-4 elsa-py-2 elsa-text-sm hover:elsa-bg-gray-100 hover:elsa-text-gray-900 ${!selectedSyntax ? 'elsa-text-blue-700' : 'elsa-text-gray-700'}`} role="menuitem">Default</a>
           </div>
           <div class="elsa-py-1" role="none">
             {this.supportedSyntaxes.map(syntax => (
               <a onClick={e => this.selectSyntax(e, syntax)} href="#"
-                 class={`elsa-block elsa-px-4 elsa-py-2 elsa-text-sm hover:elsa-bg-gray-100 hover:elsa-text-gray-900 ${selectedSyntax == syntax ? 'elsa-text-blue-700' : 'elsa-text-gray-700'}`} role="menuitem">{syntax}</a>
+                 class={`elsa elsa-block elsa-px-4 elsa-py-2 elsa-text-sm hover:elsa-bg-gray-100 hover:elsa-text-gray-900 ${selectedSyntax == syntax ? 'elsa-text-blue-700' : 'elsa-text-gray-700'}`} role="menuitem">{syntax}</a>
             ))}
           </div>
         </div>

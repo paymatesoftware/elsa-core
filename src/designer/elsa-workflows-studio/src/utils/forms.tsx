@@ -71,7 +71,7 @@ export function selectField(context: FormContext, fieldName: string, label: stri
         {label}
       </label>
       <div class="elsa-mt-1">
-        <select id={fieldId} name={fieldName} onChange={e => onSelectChange(e, context)} class="block focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-w-full elsa-shadow-sm sm:elsa-text-sm elsa-border-gray-300 elsa-rounded-md">
+        <select id={fieldId} name={fieldName} onChange={e => onSelectChange(e, context)} class="elsa block focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-w-full elsa-shadow-sm sm:elsa-text-sm elsa-border-gray-300 elsa-rounded-md">
           {options.map(item => {
             const selected = item.value === value;
             return <option value={item.value} selected={selected}>{item.text}</option>;

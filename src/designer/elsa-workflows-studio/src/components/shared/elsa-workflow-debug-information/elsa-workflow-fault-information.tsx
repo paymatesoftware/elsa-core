@@ -17,19 +17,19 @@ export class ElsaWorkflowFaultInformation {
     const renderExceptionMessage = (exception: SimpleException) => {
       return (
         <div>
-          <div class="elsa-mb-4">
-            <strong class="elsa-block elsa-font-bold">{exception.type}</strong>
+          <div class="elsa elsa-mb-4">
+            <strong class="elsa elsa-block elsa-font-bold">{exception.type}</strong>
             {exception.message}
           </div>
-          {!!exception.innerException ? <div class="elsa-ml-4">{renderExceptionMessage(exception.innerException)}</div> : undefined}
+          {!!exception.innerException ? <div class="elsa elsa-ml-4">{renderExceptionMessage(exception.innerException)}</div> : undefined}
         </div>
       );
     };
 
     return [
-      <div class="-elsa-m-3 elsa-p-3 elsa-flex elsa-items-start elsa-rounded-lg hover:elsa-bg-gray-50 elsa-transition elsa-ease-in-out elsa-duration-150">
+      <div class="elsa -elsa-m-3 elsa-p-3 elsa-flex elsa-items-start elsa-rounded-lg hover:elsa-bg-gray-50 elsa-transition elsa-ease-in-out elsa-duration-150">
         <svg
-          class="elsa-flex-shrink-0 elsa-h-6 elsa-w-6 elsa-text-red-600"
+          class="elsa elsa-flex-shrink-0 elsa-h-6 elsa-w-6 elsa-text-red-600"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -41,21 +41,21 @@ export class ElsaWorkflowFaultInformation {
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <div class="elsa-ml-4">
-          <p class="elsa-text-base elsa-font-medium elsa-text-gray-900">Fault</p>
-          <p class="elsa-mt-1 elsa-text-sm elsa-text-gray-500">
+        <div class="elsa elsa-ml-4">
+          <p class="elsa elsa-text-base elsa-font-medium elsa-text-gray-900">Fault</p>
+          <p class="elsa elsa-mt-1 elsa-text-sm elsa-text-gray-500">
             {renderExceptionMessage(this.workflowFault.exception)}
 
-            <pre class="elsa-overflow-x-scroll elsa-max-w-md" onClick={e => clip(e.currentTarget)}>
+            <pre class="elsa elsa-overflow-x-scroll elsa-max-w-md" onClick={e => clip(e.currentTarget)}>
               {JSON.stringify(this.workflowFault, null, 1)}
             </pre>
           </p>
         </div>
       </div>,
 
-      <a href="#" class="-elsa-m-3 elsa-p-3 elsa-flex elsa-items-start elsa-rounded-lg hover:elsa-bg-gray-50 elsa-transition elsa-ease-in-out elsa-duration-150">
+      <a href="#" class="elsa -elsa-m-3 elsa-p-3 elsa-flex elsa-items-start elsa-rounded-lg hover:elsa-bg-gray-50 elsa-transition elsa-ease-in-out elsa-duration-150">
         <svg
-          class="elsa-flex-shrink-0 elsa-h-6 elsa-w-6 elsa-text-blue-600"
+          class="elsa elsa-flex-shrink-0 elsa-h-6 elsa-w-6 elsa-text-blue-600"
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -73,9 +73,9 @@ export class ElsaWorkflowFaultInformation {
           <line x1="11" y1="15" x2="12" y2="15" />
           <line x1="12" y1="15" x2="12" y2="18" />
         </svg>
-        <div class="elsa-ml-4">
-          <p class="elsa-text-base elsa-font-medium elsa-text-gray-900">Faulted At</p>
-          <p class="elsa-mt-1 elsa-text-sm elsa-text-gray-500">{moment(this.faultedAt).format('DD-MM-YYYY HH:mm:ss')}</p>
+        <div class="elsa elsa-ml-4">
+          <p class="elsa elsa-text-base elsa-font-medium elsa-text-gray-900">Faulted At</p>
+          <p class="elsa elsa-mt-1 elsa-text-sm elsa-text-gray-500">{moment(this.faultedAt).format('DD-MM-YYYY HH:mm:ss')}</p>
         </div>
       </a>,
     ];

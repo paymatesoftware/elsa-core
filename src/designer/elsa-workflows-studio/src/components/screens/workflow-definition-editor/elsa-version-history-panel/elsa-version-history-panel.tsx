@@ -63,8 +63,8 @@ export class ElsaVersionHistoryPanel {
 
     return (
       <Host>
-        <dl class="elsa-border-gray-200 elsa-divide-y elsa-divide-gray-200">
-          <div class="elsa-text-sm elsa-font-medium">
+        <dl class="elsa elsa-border-gray-200 elsa-divide-y elsa-divide-gray-200">
+          <div class="elsa elsa-text-sm elsa-font-medium">
 
             <div class="elsa-mt-2 elsa-flex elsa-flex-col">
               <div class="">

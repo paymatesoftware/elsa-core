@@ -56,11 +56,11 @@ export class ElsaStudioDashboard {
           [route, this.i18next.t(`${menuItemsNamespace}:${route}`)] :
           [route, label]
       );
-    
+
     let routes = this.dashboardMenu.data != null ? this.dashboardMenu.data.routes : [];
 
     const renderFeatureMenuItem = (item: any, basePath: string) => {
-      return (<stencil-route-link url={`${basePath}/${item[0]}`} anchorClass="elsa-text-gray-300 hover:elsa-bg-gray-700 hover:elsa-text-white elsa-px-3 elsa-py-2 elsa-rounded-md elsa-text-sm elsa-font-medium" activeClass="elsa-text-white elsa-bg-gray-900">
+      return (<stencil-route-link url={`${basePath}/${item[0]}`} anchorClass="elsa elsa elsa-text-gray-300 hover:elsa-bg-gray-700 hover:elsa-text-white elsa-px-3 elsa-py-2 elsa-rounded-md elsa-text-sm elsa-font-medium" activeClass="elsa elsa-text-white elsa-bg-gray-900">
                 <IntlMessage label={`${item[1]}`}/>
               </stencil-route-link>)
     }
@@ -70,19 +70,19 @@ export class ElsaStudioDashboard {
     }
 
     return (
-      
-      <div class="elsa-h-screen elsa-bg-gray-100">
-        <nav class="elsa-bg-gray-800">
-          <div class="elsa-px-4 sm:elsa-px-6 lg:elsa-px-8">
-            <div class="elsa-flex elsa-items-center elsa-justify-between elsa-h-16">
-              <div class="elsa-flex elsa-items-center">
-                <div class="elsa-flex-shrink-0">
+
+      <div class="elsa elsa-h-screen elsa-bg-gray-100">
+        <nav class="elsa elsa-bg-gray-800">
+          <div class="elsa elsa-px-4 sm:elsa-px-6 lg:elsa-px-8">
+            <div class="elsa elsa-flex elsa-items-center elsa-justify-between elsa-h-16">
+              <div class="elsa elsa-flex elsa-items-center">
+                <div class="elsa elsa-flex-shrink-0">
                   <stencil-route-link url={`${basePath}/`}>
-                    <img class="elsa-h-8 elsa-w-8" src={logoPath}
+                    <img class="elsa elsa-h-8 elsa-w-8" src={logoPath}
                           alt="Workflow"/></stencil-route-link>
                 </div>
-                <div class="hidden md:elsa-block">
-                  <div class="elsa-ml-10 elsa-flex elsa-items-baseline elsa-space-x-4">
+                <div class="elsa hidden md:elsa-block">
+                  <div class="elsa elsa-ml-10 elsa-flex elsa-items-baseline elsa-space-x-4">
                     {menuItems.map(item => renderFeatureMenuItem(item, basePath))}
                   </div>
                 </div>

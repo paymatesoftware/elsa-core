@@ -78,17 +78,17 @@ export class ElsaWorkflowDefinitionSettingsModal {
     return (
       <Host>
         <elsa-modal-dialog ref={el => this.dialog = el}>
-          <div slot="content" class="elsa-py-8 elsa-pb-0">
+          <div slot="content" class="elsa elsa-py-8 elsa-pb-0">
 
             <form onSubmit={e => this.onSubmit(e)}>
-              <div class="elsa-px-8 mb-8">
-                <div class="elsa-border-b elsa-border-gray-200">
-                  <nav class="-elsa-mb-px elsa-flex elsa-space-x-8" aria-label="Tabs">
+              <div class="elsa elsa-px-8 mb-8">
+                <div class="elsa elsa-border-b elsa-border-gray-200">
+                  <nav class="elsa -elsa-mb-px elsa-flex elsa-space-x-8" aria-label="Tabs">
                     {tabs.map(tab => {
                       const isSelected = tab === selectedTab;
                       const cssClass = isSelected ? selectedClass : inactiveClass;
                       return <a href="#" onClick={e => this.onTabClick(e, tab)}
-                                class={`${cssClass} elsa-whitespace-nowrap elsa-py-4 elsa-px-1 elsa-border-b-2 elsa-font-medium elsa-text-sm`}>{tab}</a>;
+                                class={`elsa ${cssClass} elsa-whitespace-nowrap elsa-py-4 elsa-px-1 elsa-border-b-2 elsa-font-medium elsa-text-sm`}>{tab}</a>;
                     })}
                   </nav>
                 </div>
@@ -96,15 +96,15 @@ export class ElsaWorkflowDefinitionSettingsModal {
 
               {this.renderSelectedTab()}
 
-              <div class="elsa-pt-5">
-                <div class="elsa-bg-gray-50 elsa-px-4 elsa-py-3 sm:elsa-px-6 sm:elsa-flex sm:elsa-flex-row-reverse">
+              <div class="elsa elsa-pt-5">
+                <div class="elsa elsa-bg-gray-50 elsa-px-4 elsa-py-3 sm:elsa-px-6 sm:elsa-flex sm:elsa-flex-row-reverse">
                   <button type="submit"
-                          class="elsa-ml-0 elsa-w-full elsa-inline-flex elsa-justify-center elsa-rounded-md elsa-border elsa-border-transparent elsa-shadow-sm elsa-px-4 elsa-py-2 elsa-bg-blue-600 elsa-text-base elsa-font-medium elsa-text-white hover:elsa-bg-blue-700 focus:elsa-outline-none focus:elsa-ring-2 focus:elsa-ring-offset-2 focus:elsa-ring-blue-500 sm:elsa-ml-3 sm:elsa-w-auto sm:elsa-text-sm">
+                          class="elsa elsa elsa-ml-0 elsa-w-full elsa-inline-flex elsa-justify-center elsa-rounded-md elsa-border elsa-border-transparent elsa-shadow-sm elsa-px-4 elsa-py-2 elsa-bg-blue-600 elsa-text-base elsa-font-medium elsa-text-white hover:elsa-bg-blue-700 focus:elsa-outline-none focus:elsa-ring-2 focus:elsa-ring-offset-2 focus:elsa-ring-blue-500 sm:elsa-ml-3 sm:elsa-w-auto sm:elsa-text-sm">
                     Save
                   </button>
                   <button type="button"
                           onClick={() => this.onCancelClick()}
-                          class="elsa-mt-3 elsa-w-full elsa-inline-flex elsa-justify-center elsa-rounded-md elsa-border elsa-border-gray-300 elsa-shadow-sm elsa-px-4 elsa-py-2 elsa-bg-white elsa-text-base elsa-font-medium elsa-text-gray-700 hover:elsa-bg-gray-50 focus:elsa-outline-none focus:elsa-ring-2 focus:elsa-ring-offset-2 focus:elsa-ring-blue-500 sm:elsa-mt-0 sm:elsa-ml-3 sm:elsa-w-auto sm:elsa-text-sm">
+                          class="elsa elsa elsa-mt-3 elsa-w-full elsa-inline-flex elsa-justify-center elsa-rounded-md elsa-border elsa-border-gray-300 elsa-shadow-sm elsa-px-4 elsa-py-2 elsa-bg-white elsa-text-base elsa-font-medium elsa-text-gray-700 hover:elsa-bg-gray-50 focus:elsa-outline-none focus:elsa-ring-2 focus:elsa-ring-offset-2 focus:elsa-ring-blue-500 sm:elsa-mt-0 sm:elsa-ml-3 sm:elsa-w-auto sm:elsa-text-sm">
                     Cancel
                   </button>
                 </div>
@@ -139,7 +139,7 @@ export class ElsaWorkflowDefinitionSettingsModal {
     const formContext = this.formContext;
 
     return (
-      <div class="elsa-flex elsa-px-8">
+      <div class="elsa elsa-flex elsa-px-8">
         <div class="elsa-space-y-8 elsa-w-full">
           {textInput(formContext, 'name', 'Name', workflowDefinition.name, 'The technical name of the workflow.', 'workflowName')}
           {textInput(formContext, 'displayName', 'Display Name', workflowDefinition.displayName, 'A user-friendly display name of the workflow.', 'workflowDisplayName')}

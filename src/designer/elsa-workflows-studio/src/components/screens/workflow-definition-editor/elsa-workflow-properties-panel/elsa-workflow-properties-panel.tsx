@@ -40,18 +40,18 @@ export class ElsaWorkflowPropertiesPanel {
 
     return (
       <Host>
-        <dl class="elsa-border-b elsa-border-gray-200 elsa-divide-y elsa-divide-gray-200">
-          <div class="elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
-            <dt class="elsa-text-gray-500">{t('Name')}</dt>
-            <dd class="elsa-text-gray-900">{name}</dd>
+        <dl class="elsa elsa-border-b elsa-border-gray-200 elsa-divide-y elsa-divide-gray-200">
+          <div class="elsa elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
+            <dt class="elsa elsa-text-gray-500">{t('Name')}</dt>
+            <dd class="elsa elsa-text-gray-900">{name}</dd>
           </div>
-          <div class="elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
-            <dt class="elsa-text-gray-500">{t('DisplayName')}</dt>
-            <dd class="elsa-text-gray-900">{workflowDefinition.displayName || '-'}</dd>
+          <div class="elsa elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
+            <dt class="elsa elsa-text-gray-500">{t('DisplayName')}</dt>
+            <dd class="elsa elsa-text-gray-900">{workflowDefinition.displayName || '-'}</dd>
           </div>
-          <div class="elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
-            <dt class="elsa-text-gray-500">{t('Id')}</dt>
-            <dd class="elsa-text-gray-900 elsa-break-all">{workflowDefinition.definitionId || '-'}</dd>
+          <div class="elsa elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
+            <dt class="elsa elsa-text-gray-500">{t('Id')}</dt>
+            <dd class="elsa elsa-text-gray-900 elsa-break-all">{workflowDefinition.definitionId || '-'}</dd>
           </div>
           <div class="elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
             <dt class="elsa-text-gray-500">{t('Version')}</dt>
@@ -64,7 +64,7 @@ export class ElsaWorkflowPropertiesPanel {
           <div class="elsa-py-3 elsa-flex elsa-justify-between elsa-text-sm elsa-font-medium">
             <dt class="elsa-text-gray-500">{t('Status')}</dt>
             <dd
-              class={`${isPublished ? 'elsa-text-green-600' : 'elsa-text-yellow-700'}`}>{isPublished ? t('Published') : t('Draft')}</dd>
+              class={`elsa ${isPublished ? 'elsa-text-green-600' : 'elsa-text-yellow-700'}`}>{isPublished ? t('Published') : t('Draft')}</dd>
           </div>
         </dl>
       </Host>

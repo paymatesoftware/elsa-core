@@ -27,24 +27,24 @@ export class ElsaStudioHome {
     const serverVersion = this.serverVersion;
 
     return (
-      <div class="elsa-home-wrapper elsa-relative elsa-bg-gray-800 elsa-overflow-hidden elsa-h-screen">
-        <main class="elsa-mt-16 sm:elsa-mt-24">
-          <div class="elsa-mx-auto elsa-max-w-7xl">
-            <div class="lg:elsa-grid lg:elsa-grid-cols-12 lg:elsa-gap-8">
-              <div class="elsa-px-4 sm:elsa-px-6 sm:elsa-text-center md:elsa-max-w-2xl md:elsa-mx-auto lg:elsa-col-span-6 lg:elsa-text-left lg:flex lg:elsa-items-center">
-                <div class="elsa-home-caption-wrapper">
-                  <h1 class="elsa-mt-4 elsa-text-4xl elsa-tracking-tight elsa-font-extrabold elsa-text-white sm:elsa-mt-5 sm:elsa-leading-none lg:elsa-mt-6 lg:elsa-text-5xl xl:elsa-text-6xl">
-                    <span class="md:elsa-block"><IntlMessage label="Welcome" dangerous title={`<span class='elsa-text-teal-400 md:elsa-block'>Elsa Workflows</span> <span>${serverVersion}</span>`}/></span>
+      <div class="elsa elsa-home-wrapper elsa-relative elsa-bg-gray-800 elsa-overflow-hidden elsa-h-screen">
+        <main class="elsa elsa-mt-16 sm:elsa-mt-24">
+          <div class="elsa elsa-mx-auto elsa-max-w-7xl">
+            <div class="elsa lg:elsa-grid lg:elsa-grid-cols-12 lg:elsa-gap-8">
+              <div class="elsa elsa-px-4 sm:elsa-px-6 sm:elsa-text-center md:elsa-max-w-2xl md:elsa-mx-auto lg:elsa-col-span-6 lg:elsa-text-left lg:flex lg:elsa-items-center">
+                <div class="elsa elsa-home-caption-wrapper">
+                  <h1 class="elsa elsa-mt-4 elsa-text-4xl elsa-tracking-tight elsa-font-extrabold elsa-text-white sm:elsa-mt-5 sm:elsa-leading-none lg:elsa-mt-6 lg:elsa-text-5xl xl:elsa-text-6xl">
+                    <span class="elsa md:elsa-block"><IntlMessage label="Welcome" dangerous title={`<span class='elsa-text-teal-400 md:elsa-block'>Elsa Workflows</span> <span>${serverVersion}</span>`}/></span>
                   </h1>
-                  <p class="tagline elsa-mt-3 elsa-text-base elsa-text-gray-300 sm:elsa-mt-5 sm:elsa-text-xl lg:elsa-text-lg xl:elsa-text-xl">
+                  <p class="elsa tagline elsa-mt-3 elsa-text-base elsa-text-gray-300 sm:elsa-mt-5 sm:elsa-text-xl lg:elsa-text-lg xl:elsa-text-xl">
                     <IntlMessage label="Tagline"/>
                   </p>
                 </div>
               </div>
-              <div class="elsa-mt-16 sm:elsa-mt-24 lg:elsa-mt-0 lg:elsa-col-span-6">
-                <div class="sm:elsa-max-w-md sm:elsa-w-full sm:elsa-mx-auto sm:elsa-rounded-lg sm:elsa-overflow-hidden">
-                  <div class="elsa-px-4 elsa-py-8 sm:elsa-px-10">
-                    <img class="elsa-home-visual" src={visualPath} alt="" width={400}/>
+              <div class="elsa elsa-mt-16 sm:elsa-mt-24 lg:elsa-mt-0 lg:elsa-col-span-6">
+                <div class="elsa sm:elsa-max-w-md sm:elsa-w-full sm:elsa-mx-auto sm:elsa-rounded-lg sm:elsa-overflow-hidden">
+                  <div class="elsa elsa-px-4 elsa-py-8 sm:elsa-px-10">
+                    <img class="elsa elsa-home-visual" src={visualPath} alt="" width={400}/>
                   </div>
                 </div>
               </div>

@@ -19,7 +19,7 @@ export class ElsaInputTagsDropdown {
     valuesChangedHandler(newValue: Array<string | SelectListItem>) {
         let values: Array<SelectListItem> = [];
         const dropdownValues = this.dropdownValues || [];
-        
+
         if(!!newValue) {
             newValue.forEach(value => {
                 dropdownValues.forEach(tag => {
@@ -29,7 +29,7 @@ export class ElsaInputTagsDropdown {
                 })
             })
         }
-        
+
         this.currentValues = values || [];
     }
 
@@ -44,7 +44,7 @@ export class ElsaInputTagsDropdown {
                 }
             })
         })
-        
+
         this.currentValues = values;
     }
 
@@ -84,17 +84,17 @@ export class ElsaInputTagsDropdown {
         const valuesJson = JSON.stringify(values.map(tag => tag.value));
 
         return (
-            <div class="elsa-py-2 elsa-px-3 elsa-bg-white elsa-shadow-sm elsa-border elsa-border-gray-300 elsa-rounded-md">
+            <div class="elsa elsa-py-2 elsa-px-3 elsa-bg-white elsa-shadow-sm elsa-border elsa-border-gray-300 elsa-rounded-md">
                 {values.map(tag =>
                 (
-                    <a href="#" onClick={e => this.onDeleteTagClick(e, tag)} class="elsa-inline-block elsa-text-xs elsa-bg-blue-400 elsa-text-white elsa-py-2 elsa-px-3 elsa-mr-1 elsa-mb-1 rounded">
+                    <a href="#" onClick={e => this.onDeleteTagClick(e, tag)} class="elsa elsa-inline-block elsa-text-xs elsa-bg-blue-400 elsa-text-white elsa-py-2 elsa-px-3 elsa-mr-1 elsa-mb-1 rounded">
                         <input type="hidden" value={tag.value} />
                         <span>{tag.text}</span>
-                        <span class="elsa-text-white hover:elsa-text-white elsa-ml-1">&times;</span>
+                        <span class="elsa elsa-text-white hover:elsa-text-white elsa-ml-1">&times;</span>
                     </a>
                 ))}
 
-                <select id={this.fieldId} class="elsa-inline-block elsa-text-xs elsa-py-2 elsa-px-3 elsa-mr-1 elsa-mb-1 elsa-pr-8 elsa-border-gray-300 focus:elsa-outline-none focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-rounded" onChange={(e) => this.onTagSelected(e)}>
+                <select id={this.fieldId} class="elsa elsa-inline-block elsa-text-xs elsa-py-2 elsa-px-3 elsa-mr-1 elsa-mb-1 elsa-pr-8 elsa-border-gray-300 focus:elsa-outline-none focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-rounded" onChange={(e) => this.onTagSelected(e)}>
                     <option value="Add" disabled selected>{this.placeHolder}</option>
                     {dropdownItems.map(tag =>
                     (

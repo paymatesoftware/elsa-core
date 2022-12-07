@@ -59,12 +59,12 @@ export class ElsaMonaco {
     if (oldModel)
       oldModel.dispose();
 
-    const newModel = monaco.editor.createModel(libSource, 'typescript', monaco.Uri.parse(libUri));    
-    
+    const newModel = monaco.editor.createModel(libSource, 'typescript', monaco.Uri.parse(libUri));
+
     const matches = libSource.matchAll(/declare const (\w+): (string|number)/g);
 
     EditorVariables.splice(0, EditorVariables.length);
-    
+
     for(const match of matches) {
       EditorVariables.push({variableName: match[1], type: match[2] });
     }
@@ -174,9 +174,9 @@ export class ElsaMonaco {
     const padding = this.padding || 'elsa-pt-1.5 elsa-pl-1';
     return (
       <Host
-        class="elsa-monaco-editor-host elsa-border focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300 elsa-p-4"
+        class="elsa elsa-monaco-editor-host elsa-border focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300 elsa-p-4"
         style={{ 'min-height': this.editorHeight }}>
-        <div ref={el => this.container = el} class={`elsa-monaco-editor-container ${padding}`} />
+        <div ref={el => this.container = el} class={`elsa elsa-monaco-editor-container ${padding}`} />
       </Host>
     )
   }

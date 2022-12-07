@@ -485,7 +485,7 @@ export class ElsaWorkflowInstanceListScreen {
                     </svg>
                   </div>
                   <input name="searchTerm"
-                         class="elsa-block elsa-w-full elsa-h-full elsa-pl-8 elsa-pr-3 elsa-py-2 elsa-rounded-md elsa-text-gray-900 elsa-placeholder-gray-500 focus:elsa-placeholder-gray-400 sm:elsa-text-sm elsa-border-0 focus:elsa-outline-none focus:elsa-ring-0"
+                         class="elsa elsa-block elsa-w-full elsa-h-full elsa-pl-8 elsa-pr-3 elsa-py-2 elsa-rounded-md elsa-text-gray-900 elsa-placeholder-gray-500 focus:elsa-placeholder-gray-400 sm:elsa-text-sm elsa-border-0 focus:elsa-outline-none focus:elsa-ring-0"
                          placeholder={t('Search')}
                          type="search"/>
                 </div>
@@ -612,16 +612,16 @@ export class ElsaWorkflowInstanceListScreen {
                   <td
                     class="elsa-px-6 elsa-py-3 elsa-whitespace-no-wrap elsa-text-sm elsa-leading-5 elsa-font-medium elsa-text-gray-900">
                     <stencil-route-link url={instanceViewUrl}
-                                        anchorClass="elsa-truncate hover:elsa-text-gray-600">{workflowInstance.id}</stencil-route-link>
+                                        anchorClass="elsa elsa-truncate hover:elsa-text-gray-600">{workflowInstance.id}</stencil-route-link>
                   </td>
                   <td
                     class="elsa-px-6 elsa-py-3 elsa-whitespace-no-wrap elsa-text-sm elsa-leading-5 elsa-font-medium elsa-text-gray-900">
                     <stencil-route-link url={correlationListViewUrl}
-                                        anchorClass="elsa-truncate hover:elsa-text-gray-600">{correlationId}</stencil-route-link>
+                                        anchorClass="elsa elsa-truncate hover:elsa-text-gray-600">{correlationId}</stencil-route-link>
                   </td>
                   <td
                     class="elsa-px-6 elsa-py-3 elsa-whitespace-no-wrap elsa-text-sm elsa-leading-5 elsa-font-medium elsa-text-gray-900 elsa-text-left">
-                    <stencil-route-link url={blueprintViewUrl} anchorClass="elsa-truncate hover:elsa-text-gray-600">
+                    <stencil-route-link url={blueprintViewUrl} anchorClass="elsa elsa-truncate hover:elsa-text-gray-600">
                       {displayName}
                     </stencil-route-link>
                   </td>
@@ -632,12 +632,12 @@ export class ElsaWorkflowInstanceListScreen {
                   <td
                     class="elsa-px-6 elsa-py-3 elsa-whitespace-no-wrap elsa-text-sm elsa-leading-5 elsa-font-medium elsa-text-gray-900 elsa-text-left">
                     <stencil-route-link url={instanceViewUrl}
-                                        anchorClass="elsa-truncate hover:elsa-text-gray-600">{instanceName}</stencil-route-link>
+                                        anchorClass="elsa elsa-truncate hover:elsa-text-gray-600">{instanceName}</stencil-route-link>
                   </td>
                   <td
                     class="hidden md:elsa-table-cell elsa-px-6 elsa-py-3 elsa-whitespace-no-wrap elsa-text-sm elsa-leading-5 elsa-text-gray-500 elsa-text-right">
                     <div class="elsa-flex elsa-items-center elsa-space-x-3 lg:elsa-pl-2">
-                      <div class={`flex-shrink-0 elsa-w-2-5 elsa-h-2-5 elsa-rounded-full elsa-bg-${statusColor}-600`}/>
+                      <div class={`elsa flex-shrink-0 elsa-w-2-5 elsa-h-2-5 elsa-rounded-full elsa-bg-${statusColor}-600`}/>
                       <span>{workflowInstance.workflowStatus}</span>
                     </div>
                   </td>

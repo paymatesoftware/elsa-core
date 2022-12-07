@@ -119,7 +119,7 @@ export class ElsaSwitchCasesProperty {
               />
               <div class="elsa-absolute elsa-inset-y-0 elsa-right-0 elsa-flex elsa-items-center">
                 <select onChange={e => this.onCaseSyntaxChanged(e, switchCase, expressionEditor)}
-                        class="focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-h-full elsa-py-0 elsa-pl-2 elsa-pr-7 elsa-border-transparent elsa-bg-transparent elsa-text-gray-500 sm:elsa-text-sm elsa-rounded-md">
+                        class="elsa focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-h-full elsa-py-0 elsa-pl-2 elsa-pr-7 elsa-border-transparent elsa-bg-transparent elsa-text-gray-500 sm:elsa-text-sm elsa-rounded-md">
                   {supportedSyntaxes.map(supportedSyntax => {
                     const selected = supportedSyntax == syntax;
                     return <option selected={selected}>{supportedSyntax}</option>;
@@ -130,7 +130,7 @@ export class ElsaSwitchCasesProperty {
           </td>
           <td class="elsa-pt-1 elsa-pr-2 elsa-text-right">
             <button type="button" onClick={() => this.onDeleteCaseClick(switchCase)}
-                    class="elsa-h-5 elsa-w-5 elsa-mx-auto elsa-outline-none focus:elsa-outline-none">
+                    class="elsa elsa-h-5 elsa-w-5 elsa-mx-auto elsa-outline-none focus:elsa-outline-none">
               { iconProvider.getIcon(IconName.TrashBinOutline) }
             </button>
           </td>
@@ -176,7 +176,7 @@ export class ElsaSwitchCasesProperty {
             </tbody>
           </table>
           <button type="button" onClick={() => this.onAddCaseClick()}
-                  class="elsa-inline-flex elsa-items-center elsa-px-4 elsa-py-2 elsa-border elsa-border-transparent elsa-shadow-sm elsa-text-sm elsa-font-medium elsa-rounded-md elsa-text-white elsa-bg-blue-600 hover:elsa-bg-blue-700 focus:elsa-outline-none focus:elsa-ring-2 focus:elsa-ring-offset-2 focus:elsa-ring-blue-500 elsa-mt-2">
+                  class="elsa elsa-inline-flex elsa-items-center elsa-px-4 elsa-py-2 elsa-border elsa-border-transparent elsa-shadow-sm elsa-text-sm elsa-font-medium elsa-rounded-md elsa-text-white elsa-bg-blue-600 hover:elsa-bg-blue-700 focus:elsa-outline-none focus:elsa-ring-2 focus:elsa-ring-offset-2 focus:elsa-ring-blue-500 elsa-mt-2">
             { iconProvider.getIcon(IconName.Plus) }
             Add Case
           </button>

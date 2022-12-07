@@ -319,7 +319,7 @@ export class ElsaWorkflowInstanceViewerScreen {
 
     return `<div class="context-menu-wrapper elsa-flex-shrink-0">
             <button aria-haspopup="true"
-                    class="elsa-w-8 elsa-h-8 elsa-inline-flex elsa-items-center elsa-justify-center elsa-text-gray-400 elsa-rounded-full elsa-bg-transparent hover:elsa-text-gray-500 focus:elsa-outline-none focus:elsa-text-gray-500 focus:elsa-bg-gray-100 elsa-transition elsa-ease-in-out elsa-duration-150">
+                    class="elsa elsa-w-8 elsa-h-8 elsa-inline-flex elsa-items-center elsa-justify-center elsa-text-gray-400 elsa-rounded-full elsa-bg-transparent hover:elsa-text-gray-500 focus:elsa-outline-none focus:elsa-text-gray-500 focus:elsa-bg-gray-100 elsa-transition elsa-ease-in-out elsa-duration-150">
               ${icon}
             </button>
           </div>`;
@@ -347,11 +347,11 @@ export class ElsaWorkflowInstanceViewerScreen {
 
   renderActivityPerformanceMenu = () => {
     const activityStats: ActivityStats = this.activityStats;
-    
+
     const renderFault = () => {
       if (!activityStats.fault)
         return;
-      
+
       return <elsa-workflow-fault-information workflowFault={this.workflowInstance.faults.find(x => x.faultedActivityId == this.selectedActivityId)} faultedAt={this.workflowInstance.faultedAt} />;
     };
 
@@ -414,7 +414,7 @@ export class ElsaWorkflowInstanceViewerScreen {
       data-transition-leave="elsa-transition elsa-ease-in elsa-duration-75"
       data-transition-leave-start="elsa-transform elsa-opacity-100 elsa-scale-100"
       data-transition-leave-end="elsa-transform elsa-opacity-0 elsa-scale-95"
-      class={`${this.activityContextMenuState.shown ? '' : 'hidden'} elsa-absolute elsa-z-10 elsa-mt-3 elsa-px-2 elsa-w-screen elsa-max-w-xl sm:elsa-px-0`}
+      class={`elsa ${this.activityContextMenuState.shown ? '' : 'hidden'} elsa-absolute elsa-z-10 elsa-mt-3 elsa-px-2 elsa-w-screen elsa-max-w-xl sm:elsa-px-0`}
       style={{left: `${this.activityContextMenuState.x + 64}px`, top: `${this.activityContextMenuState.y - 256}px`}}
       ref={el => this.contextMenu = el}
     >
