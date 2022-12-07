@@ -2,6 +2,7 @@ import {Config} from '@stencil/core';
 import {postcss} from '@stencil/postcss';
 import postcssImport from 'postcss-import';
 import tailwindcss from 'tailwindcss';
+import tailwindNesting from 'tailwindcss/nesting';
 import cssnano from 'cssnano';
 
 // @ts-ignore
@@ -29,6 +30,7 @@ export const config: Config = {
     postcss({
       plugins: [
         postcssImport,
+        tailwindNesting,
         tailwindcss,
         purgecss,
         cssnano
