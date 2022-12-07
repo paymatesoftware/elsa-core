@@ -134,7 +134,7 @@ export class ElsaSecretsPickerModal {
                       </svg>
                     </div>
                     <input type="text" value={this.searchText} onInput={e => this.onSearchTextChange(e)}
-                           class="form-input elsa-block elsa-w-full elsa-pl-10 sm:elsa-text-sm sm:elsa-leading-5 focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-rounded-md elsa-border-gray-300"
+                           class="elsa form-input elsa-block elsa-w-full elsa-pl-10 sm:elsa-text-sm sm:elsa-leading-5 focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-rounded-md elsa-border-gray-300"
                            placeholder="Search secrets"/>
                   </div>
                 </div>

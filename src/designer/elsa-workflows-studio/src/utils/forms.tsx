@@ -26,9 +26,9 @@ export function textInput(context: FormContext, fieldName: string, label: string
       </label>
       <div class="elsa-mt-1">
         {readonlyField ? <input type="text" readonly id={fieldId} name={fieldName} value={value}
-                                class="focus:elsa-ring-blue-500 focus:elsa-border-blue-500 block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300"/>
+                                class="elsa focus:elsa-ring-blue-500 focus:elsa-border-blue-500 block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300"/>
           : <input type="text" id={fieldId} name={fieldName} value={value} onChange={e => onTextInputChange(e, context)}
-                   class="focus:elsa-ring-blue-500 focus:elsa-border-blue-500 block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300"/>}
+                   class="elsa focus:elsa-ring-blue-500 focus:elsa-border-blue-500 block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300"/>}
       </div>
       {hint && hint.length > 0 ? <p class="elsa-mt-2 elsa-text-sm elsa-text-gray-500">{hint}</p> : undefined}
     </div>);
@@ -39,7 +39,7 @@ export function checkBox(context: FormContext, fieldName: string, label: string,
   return (
     <div class="elsa-relative elsa-flex elsa-items-start">
       <div class="elsa-flex elsa-items-center elsa-h-5">
-        <input id={fieldId} name={fieldName} type="checkbox" value="true" checked={checked} onChange={e => onCheckBoxChange(e, context)} class="focus:elsa-ring-blue-500 elsa-h-4 elsa-w-4 elsa-text-blue-600 elsa-border-gray-300 rounded"/>
+        <input id={fieldId} name={fieldName} type="checkbox" value="true" checked={checked} onChange={e => onCheckBoxChange(e, context)} class="elsa focus:elsa-ring-blue-500 elsa-h-4 elsa-w-4 elsa-text-blue-600 elsa-border-gray-300 rounded"/>
       </div>
       <div class="elsa-ml-3 elsa-text-sm">
         <label htmlFor={fieldId} class="elsa-font-medium elsa-text-gray-700">{label}</label>

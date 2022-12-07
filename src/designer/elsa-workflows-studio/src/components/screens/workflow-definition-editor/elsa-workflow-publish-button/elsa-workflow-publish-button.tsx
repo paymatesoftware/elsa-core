@@ -128,7 +128,7 @@ export class ElsaWorkflowPublishButton {
             </div>
           </span>
         </span>
-        <input type="file" class="hidden" onChange={e => this.onFileInputChange(e)} ref={el => this.fileInput = el}/>
+        <input type="file" class="elsa hidden" onChange={e => this.onFileInputChange(e)} ref={el => this.fileInput = el}/>
       </Host>
     );
   }

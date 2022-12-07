@@ -101,10 +101,10 @@ export class ElsaDictionaryProperty {
             <div class="elsa-flex elsa-flex-row elsa-justify-between elsa-mb-2">
               <input id={keyInputId} type="text" value={key} onChange={(e) => this.onKeyChanged(e, index)}
                      placeholder="Name"
-                     class="disabled:elsa-opacity-50 disabled:elsa-cursor-not-allowed focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-border-gray-300 sm:elsa-text-sm elsa-rounded-md elsa-w-5/12"/>
+                     class="elsa disabled:elsa-opacity-50 disabled:elsa-cursor-not-allowed focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-border-gray-300 sm:elsa-text-sm elsa-rounded-md elsa-w-5/12"/>
               <input id={valueInputId} type="text" value={value} onChange={(e) => this.onValueChanged(e, index)}
                      placeholder="Value"
-                     class="disabled:elsa-opacity-50 disabled:elsa-cursor-not-allowed focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-border-gray-300 sm:elsa-text-sm elsa-rounded-md elsa-w-5/12"/>
+                     class="elsa disabled:elsa-opacity-50 disabled:elsa-cursor-not-allowed focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-border-gray-300 sm:elsa-text-sm elsa-rounded-md elsa-w-5/12"/>
               <div class="elsa-flex elsa-flex-row elsa-justify-between elsa-w-24">
                 <button class="elsa" type="button" onClick={() => this.onRowDeleted(index)}>
                   {iconProvider.getIcon(IconName.TrashBinOutline, {color: IconColor.Gray, hoverColor: IconColor.Red})}

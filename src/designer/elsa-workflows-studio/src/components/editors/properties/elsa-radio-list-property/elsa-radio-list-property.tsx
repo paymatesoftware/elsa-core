@@ -77,7 +77,7 @@ export class ElsaRadioListProperty {
                 <div class="elsa-flex elsa-items-center elsa-h-5">
                   <input id={inputId} type="radio" radioGroup={fieldId} checked={isSelected} value={value}
                          onChange={e => this.onCheckChanged(e)}
-                         class="elsa-focus:ring-blue-500 elsa-h-4 elsa-w-4 elsa-text-blue-600 elsa-border-gray-300"/>
+                         class="elsa elsa-focus:ring-blue-500 elsa-h-4 elsa-w-4 elsa-text-blue-600 elsa-border-gray-300"/>
                 </div>
                 <div class="elsa-ml-3 elsa-mt-1 elsa-text-sm">
                   <label htmlFor={inputId} class="elsa-font-medium elsa-text-gray-700">{text}</label>

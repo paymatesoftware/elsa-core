@@ -44,7 +44,7 @@ export class ElsaCronExpressionProperty {
         const fieldName = propertyName;
 
         let value = this.currentValue;
-        
+
         if (value == undefined) {
             const defaultValue = this.propertyDescriptor.defaultValue;
             value = defaultValue ? defaultValue.toString() : undefined;
@@ -65,9 +65,9 @@ export class ElsaCronExpressionProperty {
                 single-line={true}>
                 <div>
                     <input type="text" id={fieldId} name={fieldName} value={value} onChange={e => this.onChange(e)}
-                        class="disabled:elsa-opacity-50 disabled:elsa-cursor-not-allowed focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300"
+                        class="elsa disabled:elsa-opacity-50 disabled:elsa-cursor-not-allowed focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300"
                         disabled={isReadOnly} />
-                    <p class="elsa-mt-2 elsa-text-sm elsa-text-gray-500">{this.valueDescription}</p>                    
+                    <p class="elsa-mt-2 elsa-text-sm elsa-text-gray-500">{this.valueDescription}</p>
                 </div>
 
             </elsa-property-editor>

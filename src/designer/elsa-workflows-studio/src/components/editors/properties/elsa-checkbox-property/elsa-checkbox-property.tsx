@@ -49,7 +49,7 @@ export class ElsaCheckBoxProperty {
             <div class="elsa-flex elsa-items-center elsa-h-5">
               <input id={fieldId} name={fieldName} type="checkbox" checked={isChecked} value={'true'}
                      onChange={e => this.onCheckChanged(e)}
-                     class="focus:elsa-ring-blue-500 elsa-h-4 elsa-w-4 elsa-text-blue-600 elsa-border-gray-300 elsa-rounded"/>
+                     class="elsa focus:elsa-ring-blue-500 elsa-h-4 elsa-w-4 elsa-text-blue-600 elsa-border-gray-300 elsa-rounded"/>
             </div>
             <div class="elsa-ml-3 elsa-text-sm">
               <label htmlFor={fieldId} class="elsa-font-medium elsa-text-gray-700">{fieldLabel}</label>

@@ -102,7 +102,7 @@ export class ElsaSwitchCasesProperty {
         <tr key={`case-${index}`}>
           <td class="elsa-py-2 elsa-pr-5">
             <input type="text" value={switchCase.name} onChange={e => this.onCaseNameChanged(e, switchCase)}
-                   class="focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300"/>
+                   class="elsa focus:elsa-ring-blue-500 focus:elsa-border-blue-500 elsa-block elsa-w-full elsa-min-w-0 elsa-rounded-md sm:elsa-text-sm elsa-border-gray-300"/>
           </td>
           <td class="elsa-py-2 pl-5">
 
