@@ -2532,6 +2532,14 @@ select {
   z-index: 10;
 }
 
+.elsa-z-1000 {
+  z-index: 1000;
+}
+
+.elsa-z-1100 {
+  z-index: 1000;
+}
+
 .elsa-z-0 {
   z-index: 0;
 }
